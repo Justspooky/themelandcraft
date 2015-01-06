@@ -1,0 +1,24 @@
+name: ThemeLandCraft Core
+version: 0.5 alpha
+main: nl.justspooky.tlc.Startup
+author: justspooky
+description: Deze plugin is ge schreven door Kevin wilmsen van serverdevelopment.nl voor ThemeLandCraft.
+commands:
+  website:
+    description: Neem een kijk je op onze website
+    aliases: [web]
+  resourcepack:
+    description: Download ons resource pack.
+    aliases: [pack,rp]
+  themelandcraft:
+    description: Algemene help voor de themelandcraft plugin.
+    aliases: [tlc]
+  author:
+    description: Dit geeft info over de maker van de plugin.
+    aliases: [kevin,spooky,justspooky]
+  nojump:
+    description: dit is om de spring mogelijkheid uittezetten voor spelers.
+    aliases: [jump]
+  tlcadmin:
+    description: Voor de admin config.
+    aliases: [tadmin]
