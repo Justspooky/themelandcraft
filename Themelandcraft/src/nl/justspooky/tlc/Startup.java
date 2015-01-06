@@ -29,8 +29,13 @@ public class Startup extends JavaPlugin implements Listener {
 	
 	@Override
 	public void onEnable(){
-		l.info("ThemeLandCraft core is enabled");
-		l.info("ง4" + "Deze Plugin is gemaakt door: Kevin Wilmsen van Serverdevelopment.nl");
+		l.info("-----------------------------------------------------");
+		l.info("Themelandcraft Is Enabled !!!");
+		l.info("Developer: Kevin Wilmsen http://www.kevinwilmsen.nl");
+		l.info("Website: http://www.serverdevelopment.nl");
+		l.info("Version: " + getDescription().getVersion());
+		l.info("Authors: " + getDescription().getAuthors());
+		l.info("-----------------------------------------------------");
 		//PluginManager manager = this.getServer().getPluginManager();
 		Bukkit.getServer().getPluginManager().registerEvents(this, this);
 		getConfig().options().copyDefaults(true);
@@ -39,8 +44,13 @@ public class Startup extends JavaPlugin implements Listener {
 	}
 	@Override
 	public void onDisable(){
-		l.info("ThemeLandCraft core is disabled");
-		l.info("ง4" + "Deze Plugin is gemaakt door: Kevin Wilmsen van Serverdevelopment.nl");
+		l.info("-----------------------------------------------------");
+		l.info("Themelandcraft Is Disabled !!!");
+		l.info("Developer: Kevin Wilmsen http://www.kevinwilmsen.nl");
+		l.info("Website: http://www.serverdevelopment.nl");
+		l.info("Version: " + getDescription().getVersion());
+		l.info("Authors: " + getDescription().getAuthors());
+		l.info("-----------------------------------------------------");
 	}
 	
 	
@@ -89,7 +99,7 @@ public class Startup extends JavaPlugin implements Listener {
 		
 		if(cmd.getName().equalsIgnoreCase("website")){
 			String website = getConfig().getString("website");
-			website = website.replaceAll("&", "ง");
+			website = website.replaceAll("&", "ยง");
 			if (website.contains("adf.ly")){
 				getConfig().set("website", "Je mag geen geld verdienen met een gratis plugin van serverdevelopment dus ook geen adfly");
 				saveConfig();
@@ -109,7 +119,7 @@ public class Startup extends JavaPlugin implements Listener {
 		if(cmd.getName().equalsIgnoreCase("resourcepack")){
 			//sender.sendMessage(prefix + ChatColor.YELLOW + getConfig().getString("resource pack"));
 			String rp = getConfig().getString("resource-pack");
-			rp = rp.replaceAll("&", "ง");
+			rp = rp.replaceAll("&", "ยง");
 			if (rp.contains("http://adf.ly")){
 				getConfig().set("website", "&6Je mag geen geld verdienen met een gratis plugin van serverdevelopment dus ook geen adfly");
 				saveConfig();
@@ -195,7 +205,7 @@ public class Startup extends JavaPlugin implements Listener {
                     if(getConfig().getStringList("badwords").contains(word)){
                     	
                     		String scheldkick = getConfig().getString("anti-scheld-msg");
-                    		scheldkick.replaceAll("&", "ง");
+                    		scheldkick.replaceAll("&", "ยง");
                     		e.setCancelled(true);
                          e.getPlayer().playSound(e.getPlayer().getLocation(), Sound.VILLAGER_HIT, 5, 1);
                         // e.getPlayer().playEffect(e.getPlayer().getLocation(), Effect.BLAZE_SHOOT, 100);
